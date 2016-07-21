@@ -6,7 +6,7 @@ exports.init = function(grunt) {
   var iduri = require('cmd-util').iduri;
   var relative = require('relative');
   var md5 = require('./util').md5;
-  var _ = grunt.util._;
+  var _ = require('lodash')
 
   return {
     jsParser: jsParser
@@ -234,7 +234,7 @@ exports.init = function(grunt) {
         return meta.dependencies.map(function(id) {
           id = iduri.absolute(alias, id);
           // won't return if deps were loaded(defined in file)
-          if (!_.contains(ids, id) && !_.contains(ids, id.replace(/\.js$/, ''))) {
+          if (!_.includes(ids, id) && !_.includes(ids, id.replace(/\.js$/, ''))) {
             id = iduri.appendext(id);
             var file = getFileInfo(path.join(fbase, id));
             if (!file) return;
