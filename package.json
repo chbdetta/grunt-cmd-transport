@@ -33,6 +33,7 @@
     "css2str": "~0.1.1",
     "handlebars": "1.0.11",
     "htmlclean": "~2.2.3",
+    "lodash": "^4.13.1",
     "relative": "~1.2.0",
     "uglify-js": "~2.2.5"
   },
@@ -41,7 +42,6 @@
     "grunt-contrib-clean": "~0.4.0",
     "grunt-contrib-jshint": "~0.1.1",
     "grunt-mocha-test": "~0.4.0",
-    "lodash": "^4.13.1",
     "should": "~1.2.2"
   },
   "keywords": [
